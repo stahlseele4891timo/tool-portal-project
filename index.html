@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aviation Management</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="tools/prompt-tutor/tutor.css">
   <script src="js/theme.js"></script>
   <script src="js/tools.js"></script>
+  <script src="tools/prompt-tutor/tutor.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -18,14 +20,33 @@
       <h1>Learn airport management with AI prompting</h1>
       <p class="lead">Small tools for students. Pick a tool to get started.</p>
       <ul id="tool-list" class="cards"></ul>
-      <noscript><p><a href="tools/prompt-tutor/index.html">AI Prompt Engineering Tutor</a></p></noscript>
+      <noscript><p>This portal needs JavaScript to show its tools.</p></noscript>
     </div>
 
     <!-- Tool views open inside the portal. The URL ends in #<id>; the back link goes to #. -->
-    <section id="tool-1" class="tool-view" hidden>
+    <section id="prompt-tutor" class="tool-view" hidden>
       <p><a href="#">&larr; All tools</a></p>
-      <h1 tabindex="-1">Tool 1 &mdash; coming soon</h1>
-      <p class="lead">This is a placeholder. A real tool will appear here later.</p>
+      <h1 tabindex="-1">AI Prompt Engineering Tutor</h1>
+      <p class="lead">Pick a technique, read the short lesson, then write your own prompt for an airport scenario.</p>
+
+      <nav aria-label="Techniques"><ul id="lesson-tabs" class="tabs"></ul></nav>
+
+      <section id="lesson" aria-live="polite">
+        <h2 id="lesson-title"></h2>
+        <p id="lesson-text"></p>
+        <div class="examples">
+          <div class="example"><h3>Weak prompt</h3><p id="weak"></p></div>
+          <div class="example"><h3>Stronger prompt</h3><p id="strong"></p></div>
+        </div>
+
+        <h2>Try it</h2>
+        <p id="scenario"></p>
+        <label for="answer">Your prompt</label>
+        <textarea id="answer" rows="6"></textarea>
+        <p><button id="check" type="button">Check my prompt</button></p>
+
+        <div id="feedback" aria-live="polite"></div>
+      </section>
     </section>
   </main>
   <footer class="site-footer">Aviation Management</footer>

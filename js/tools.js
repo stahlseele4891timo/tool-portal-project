@@ -5,12 +5,7 @@ var TOOLS = [
   {
     name: "AI Prompt Engineering Tutor",
     description: "Learn how to write clear AI prompts, using airport management scenarios. Read a short lesson, then try it yourself.",
-    href: "tools/prompt-tutor/index.html"
-  },
-  {
-    name: "Tool 1 \u2014 coming soon",
-    description: "A placeholder showing how tools open and close in the portal.",
-    href: "#tool-1"
+    href: "#prompt-tutor"
   }
 ];
 
@@ -32,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Portal navigation: show the tool view named in the URL (#tool-1), or the home view.
+// Portal navigation: show the tool view named in the URL (#prompt-tutor), or the home view.
 function showView() {
   var home = document.getElementById("home");
   if (!home) return;
