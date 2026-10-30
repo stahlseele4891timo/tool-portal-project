@@ -1,0 +1,109 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f3f6fb;
+  --text: #1a1f2b;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --accent: #1d4ed8;
+  --accent-text: #ffffff;
+  --good: #166534;
+  --bad: #b91c1c;
+  --focus: #1d4ed8;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e5e9f0;
+  --muted: #b6c0d0;
+  --border: #3b4a63;
+  --accent: #8ab4ff;
+  --accent-text: #0f172a;
+  --good: #86efac;
+  --bad: #fca5a5;
+  --focus: #8ab4ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+button, .button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); line-height: 1.2; }
+.lead { color: var(--muted); font-size: 1.1rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card:hover { border-color: var(--accent); }
+.card h2 { margin: 0 0 0.5rem; font-size: 1.15rem; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); }
+
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}

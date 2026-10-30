@@ -7,12 +7,12 @@
 
 ## Project Structure
 
-The repository is nearly empty for now. It only contains:
-
-- `README.md` – project readme
-- `CLAUDE.md` – this file
-
-Update this section as pages, stylesheets, and scripts are added.
+- `index.html` – portal home page; shows a card for each tool
+- `css/style.css` – shared styles and the light/dark theme colors
+- `js/theme.js` – theme toggle (remembers the choice)
+- `js/tools.js` – the list of tools; add one entry per new tool
+- `tools/<tool-name>/` – one folder per tool (currently `prompt-tutor`)
+- `README.md`, `CLAUDE.md` – docs
 
 ## Key Requirements
 

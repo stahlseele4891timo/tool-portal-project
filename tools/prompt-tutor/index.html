@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Prompt Engineering Tutor</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="tutor.css">
+  <script src="../../js/theme.js"></script>
+  <script src="tutor.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="../../index.html">Aviation Management</a>
+    <button id="theme-toggle" type="button" class="secondary" aria-pressed="false">Switch to dark theme</button>
+  </header>
+  <main>
+    <p><a href="../../index.html">&larr; All tools</a></p>
+    <h1>AI Prompt Engineering Tutor</h1>
+    <p class="lead">Pick a technique, read the short lesson, then write your own prompt for an airport scenario.</p>
+
+    <nav aria-label="Techniques"><ul id="lesson-tabs" class="tabs"></ul></nav>
+
+    <section id="lesson" aria-live="polite">
+      <h2 id="lesson-title"></h2>
+      <p id="lesson-text"></p>
+      <div class="examples">
+        <div class="example"><h3>Weak prompt</h3><p id="weak"></p></div>
+        <div class="example"><h3>Stronger prompt</h3><p id="strong"></p></div>
+      </div>
+
+      <h2>Try it</h2>
+      <p id="scenario"></p>
+      <label for="answer">Your prompt</label>
+      <textarea id="answer" rows="6"></textarea>
+      <p><button id="check" type="button">Check my prompt</button></p>
+
+      <div id="feedback" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer">Aviation Management</footer>
+</body>
+</html>
