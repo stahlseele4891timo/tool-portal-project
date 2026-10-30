@@ -22,6 +22,10 @@ Phase 1 is the portal plus exactly one tool.
 - [x] First real tool: AI Prompt Engineering Tutor (`tools/prompt-tutor/`)
 - [x] Replace the "Tool 1 — coming soon" placeholder with the real tool, opened through the same navigation (URL ending in `#prompt-tutor`)
 
+## Visual Design
+
+"Runway Night": charcoal and runway amber. Colors are CSS variables in `css/style.css` (light and dark sets); use them, never hard-coded colors. Fonts (Google Fonts, linked in `index.html`): Barlow Condensed for headings, Barlow for body text, JetBrains Mono for labels and prompts.
+
 ## Key Requirements
 
 1. Every page must be responsive and work on desktop, tablet, and phone.

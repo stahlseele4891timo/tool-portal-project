@@ -1,42 +1,49 @@
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   padding: 0;
   list-style: none;
 }
 
 .tabs button[aria-current="true"] {
   background: var(--accent);
-  color: var(--accent-text);
+  color: var(--bg);
 }
+
+#prompt-tutor h2 { font-size: 2rem; }
+#prompt-tutor h3 { font-family: var(--font-mono); font-size: 0.875rem; font-weight: 500; text-transform: uppercase; }
 
 .examples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .example {
-  padding: 0 1rem;
+  padding: 0 1.5rem 0.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
+  border-radius: 4px;
 }
 
-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.example p { font-family: var(--font-mono); font-size: 0.9375rem; }
+
+label { display: block; font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; margin-bottom: 0.25rem; }
 
 textarea {
   width: 100%;
-  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
   padding: 0.75rem;
   color: var(--text);
   background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 4px;
 }
 
 #feedback ul { padding-left: 1.25rem; }
-.pass { color: var(--good); font-weight: 600; }
-.miss { color: var(--bad); font-weight: 600; }
+.pass, .miss { font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; }
+.pass { color: var(--good); }
+.miss { color: var(--bad); }
 .hint { color: var(--muted); }
