@@ -14,6 +14,13 @@
 - `tools/<tool-name>/` – one folder per tool (currently `prompt-tutor`)
 - `README.md`, `CLAUDE.md` – docs
 
+## Feature Plan
+
+Phase 1 is the portal plus exactly one tool.
+
+- [x] Portal page (`index.html`) with a card grid, plus a placeholder "Tool 1 — coming soon" card that opens and closes through the portal's navigation (URL ending in `#tool-1`; the back link goes to `#`)
+- [x] First real tool: AI Prompt Engineering Tutor (`tools/prompt-tutor/`)
+
 ## Key Requirements
 
 1. Every page must be responsive and work on desktop, tablet, and phone.

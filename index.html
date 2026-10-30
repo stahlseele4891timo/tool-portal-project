@@ -14,10 +14,19 @@
     <button id="theme-toggle" type="button" class="secondary" aria-pressed="false">Switch to dark theme</button>
   </header>
   <main>
-    <h1>Learn airport management with AI prompting</h1>
-    <p class="lead">Small tools for students. Pick a tool to get started.</p>
-    <ul id="tool-list" class="cards"></ul>
-    <noscript><p><a href="tools/prompt-tutor/index.html">AI Prompt Engineering Tutor</a></p></noscript>
+    <div id="home">
+      <h1>Learn airport management with AI prompting</h1>
+      <p class="lead">Small tools for students. Pick a tool to get started.</p>
+      <ul id="tool-list" class="cards"></ul>
+      <noscript><p><a href="tools/prompt-tutor/index.html">AI Prompt Engineering Tutor</a></p></noscript>
+    </div>
+
+    <!-- Tool views open inside the portal. The URL ends in #<id>; the back link goes to #. -->
+    <section id="tool-1" class="tool-view" hidden>
+      <p><a href="#">&larr; All tools</a></p>
+      <h1 tabindex="-1">Tool 1 &mdash; coming soon</h1>
+      <p class="lead">This is a placeholder. A real tool will appear here later.</p>
+    </section>
   </main>
   <footer class="site-footer">Aviation Management</footer>
 </body>
